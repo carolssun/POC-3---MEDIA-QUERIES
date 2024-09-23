@@ -1,0 +1,102 @@
+/* Variáveis */
+:root {
+    --fgcolor: #383838;
+    --bgcolor: pink;
+    --mobile_p_font_size: 16pt;
+    --desktop_font_size: 12pt;
+}
+
+/* Reset */
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Text */
+p {
+    font-size: var(--mobile_p_font_size);
+}
+
+header h1 {
+    text-align: center;
+}
+
+/* Geral */
+#galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    cursor: pointer;
+    background-color: var(--bgcolor);
+    color: var(--fgcolor);
+    border-radius: 30px;
+
+    padding: 10px;
+    margin: 10px; 
+
+    font-size: var(--desktop_font_size);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    box-shadow: 1px 3px 2px rgb(255, 182, 193); 
+    background-color: #fff; /* Fundo branco dos cards */
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); 
+}
+
+.card-img {
+    width: 100px; 
+    height: 100px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+/* Mobile */
+
+
+/* Desktop e outros */
+@media screen and (min-width: 1200px) {
+    #galeria {
+        display: flex;
+    }
+
+}
+
+/* Impressão */
+@media print {
+
+}
