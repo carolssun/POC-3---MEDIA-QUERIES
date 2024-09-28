@@ -1,52 +1,42 @@
+*{
+    margin:0;
+    padding: 0;
+
+}
+
 /* Variáveis */
 :root {
     --fgcolor: #383838;
-    --bgcolor: pink;
-    --mobile_p_font_size: 16pt;
-    --desktop_font_size: 12pt;
+    --nav_color: pink;
+
+    --moblie_bg_color: #c6e5b1;
+    --mobile_p_font_size: 20pt;
+    --mobile_h1:25pt;
+
+    --tablet_bg_color:#cca9dd;
+    --tablet_font_size: 18pt;
+    --tablet_h1:22pt;
+
+    --desktop_font_size: 14pt;
+    --desktop_bg_color:#f0f0f0;
+    --desktop_h1:20pt;
 }
 
 /* Reset */
 html, 
 body {
-    margin: 0;
-    padding: 0;
     height: 100%;
 }
 
 /* Text */
-p {
-    font-size: var(--mobile_p_font_size);
-}
-
 header h1 {
     text-align: center;
 }
 
 /* Geral */
-#galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    cursor: pointer;
-    background-color: var(--bgcolor);
-    color: var(--fgcolor);
-    border-radius: 30px;
-
-    padding: 10px;
-    margin: 10px; 
-
-    font-size: var(--desktop_font_size);
-    font-weight: bold;
-    text-align: center;
 }
 
 /* Card */
@@ -75,6 +65,31 @@ nav ul li {
     height: 100px;
 }
 
+
+/* Mobile */
+#galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    background-color: var(--moblie_bg_color) ;
+}
+
+nav ul li {
+    cursor: pointer;
+    background-color: var(--nav_color);
+    color: var(--fgcolor);
+    border-radius: 30px;
+
+    padding: 10px;
+    margin: 10px; 
+
+    font-size: var(--mobile_p_font_size);
+    font-weight: bold;
+    text-align: center;
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
@@ -84,19 +99,116 @@ nav ul li {
     padding: 0;
     gap: 0;
 }
+p {
+    font-size: var(--mobile_p_font_size);
+}
+h1{
+    font-size: var(--mobile_h1);
+}
 
-/* Mobile */
+/*TABLET*/
+@media screen and (min-width: 768px) {
+    #galeria {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os cards "quebrem" para a linha de baixo */
+        justify-content: center;
+        flex-direction: row; /* Alinha os cards em linha */
+        align-items: center;
+    }
 
+    body{
+        background-color: var(--tablet_bg_color);
+    }
 
-/* Desktop e outros */
+    nav ul li {
+        cursor: pointer;
+        background-color: var(--fgcolor);
+        color: var(--nav_color);
+        border-radius: 30px;
+    
+        padding: 10px;
+        margin: 10px; 
+    
+        font-size: var(--tablet_font_size);
+        font-weight: bold;
+        text-align: center;
+    }
+    p {
+        font-size: var(--tablet_font_size);
+    }
+    h1{
+        font-size: var(--tablet_h1);
+    }
+    
+}
+
+/* DESKTOP*/
 @media screen and (min-width: 1200px) {
     #galeria {
         display: flex;
+        flex-wrap: wrap; /* Permite que os cards "quebrem" para a linha de baixo */
+        justify-content: space-around;
+        flex-direction: row; /* Alinha os cards em linha */
+    }
+    body{
+        background-color: var(--desktop_bg_color)
+    }
+    nav{
+        background-color: pink;
+        border-radius: 30px;
+        margin:15px;
+    }
+    nav ul{
+        display:flex;
+        justify-content: space-around;
+        padding: 15px;
     }
 
+    nav ul li {
+        cursor: pointer;
+        background-color: var(--nav_color);
+        color: var(--fg_color);
+     
+        font-size: var(--desktop_font_size);
+        font-weight: bold;
+        text-align: center;
+    }
+    p {
+        font-size: var(--desktop_font_size);
+    }
+    h1{
+        font-size: var(--desktop_h1);
+    }
+    
 }
 
 /* Impressão */
-@media print {
+@media print and (orientation:landscape) {
+    nav ul{
+        display:none;
+    }
+    #galeria {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os cards "quebrem" para a linha de baixo */
+        justify-content: center;
+        flex-direction: row; /* Alinha os cards em linha */
+        align-items: center;
+    }
+    .card{
+        max-height: 400px;
+    }
+}
+    @media print and (orientation:portrait) {
+        nav ul{
+            display:none;
+        }
+        #galeria {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os cards "quebrem" para a linha de baixo */
+            justify-content: center;
+            flex-direction: row; /* Alinha os cards em linha */
+            align-items: center;
+        }
+         
 
 }

@@ -1,9 +1,9 @@
 const listaGatinhos = [
-    { nome: "Mingau", idade: 2, foto: "./images/branco.png", cor: "branco", raca: "Siamês", ração: "Ração Premium", sachê: "Sachê de Atum" },
-    { nome: "Whisky", idade: 9, foto: "./images/calico.png", cor: "cálico", raca: "Persa", ração: "Ração Standard", sachê: "Sachê de Frango" },
-    { nome: "Café", idade: 6, foto: "./images/marrom.png", cor: "marrom", raca: "Não identificada", ração: "Ração Super Premium", sachê: "Sachê de Carne" },
-    { nome: "Luna", idade: 2, foto: "./images/cinza.png", cor: "cinza", raca: "Exótico", ração: "Ração Hipoalergênica", sachê: "Sachê de Salmão" },
-    { nome: "Garfield", idade: 4, foto: "./images/laranja.png", cor: "laranja", raca: "Não identificada", ração: "Ração Gourmet", sachê: "Sachê de Peru" }
+    { nome: "Mingau", idade: 2, foto: "./images/branco.png", cor: "branco", raca: "Siamês", ração: "Ração Premium" },
+    { nome: "Whisky", idade: 9, foto: "./images/calico.png", cor: "cálico", raca: "Persa", ração: "Ração Standard"},
+    { nome: "Café", idade: 6, foto: "./images/marrom.png", cor: "marrom", raca: "Não identificada", ração: "Ração Super Premium"},
+    { nome: "Luna", idade: 2, foto: "./images/cinza.png", cor: "cinza", raca: "Exótico", ração: "Ração Hipoalergênica"},
+    { nome: "Garfield", idade: 4, foto: "./images/laranja.png", cor: "laranja", raca: "Não identificada", ração: "Ração Gourmet"}
 ];
 
 const exibirGatosOrdenados = () => {
@@ -20,7 +20,6 @@ const exibirGatosOrdenados = () => {
                 <p>Cor: ${gato.cor}</p>
                 <p>Raça: ${gato.raca}</p>
                 <p>Tipo de Ração: ${gato.ração}</p>
-                <p>Tipo de Sachê: ${gato.sachê}</p>
             </div>
         </article>
     `);
